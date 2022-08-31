@@ -38,6 +38,9 @@ body {
   width: 20px;
   height: 20px;
 }
+.main .playGround .row .cell#x16 {
+  background-color: white;
+}
 
 .footer {
   position: absolute;

@@ -12,13 +12,13 @@ const playGround: Element | null = document.querySelector(".playGround");
                     row.id = `y${x+1}`
                     playGround?.appendChild(row);
                     let i: number;
-                    for(i = 0 ; i < 30 ; i++) {
+                    for(i = 0 ; i < 31 ; i++) {
                         const cell: HTMLDivElement = document.createElement("div"); // create one cell
-                            // <initial styles for cell
-                            cell.className = "cell"
-                            cell.id = `x${i+1}`
-                            // initial styles for cell>
-                            row?.appendChild(cell);
+                        // <initial styles for cell
+                        cell.className = "cell"
+                        cell.id = `x${i+1}`
+                        // initial styles for cell>
+                        row?.appendChild(cell);
                     }
                 // create row>
             }

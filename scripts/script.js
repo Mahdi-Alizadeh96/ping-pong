@@ -11,7 +11,7 @@ for (x = 0; x < 20; x++) {
     row.id = "y".concat(x + 1);
     playGround === null || playGround === void 0 ? void 0 : playGround.appendChild(row);
     var i = void 0;
-    for (i = 0; i < 30; i++) {
+    for (i = 0; i < 31; i++) {
         var cell = document.createElement("div"); // create one cell
         // <initial styles for cell
         cell.className = "cell";
