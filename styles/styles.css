@@ -27,6 +27,18 @@ body {
   display: flex;
   height: 100%;
 }
+.main .playGround {
+  margin: auto;
+}
+.main .playGround .row {
+  display: flex;
+}
+.main .playGround .row .cell {
+  background-color: gray;
+  width: 20px;
+  height: 20px;
+}
+
 .footer {
   position: absolute;
   bottom: 0%;
