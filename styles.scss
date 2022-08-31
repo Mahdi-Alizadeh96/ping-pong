@@ -1,0 +1,47 @@
+// <initial styles setting
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+// initial styles setting>
+
+// <general styles
+.header {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    padding: 1.5rem;
+
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+.main {
+    background-color: rgb(36, 36, 36);
+    padding: 8rem 3rem;
+    display: flex;
+    height: 100%;
+    .playGround {
+        
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    p {
+        padding: 1rem;
+        text-align: center;
+        color: white;
+    }
+}
+// general styles>
