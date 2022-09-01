@@ -25,6 +25,7 @@ body {
   background-color: rgb(36, 36, 36);
   padding: 8rem 3rem;
   display: flex;
+  flex-direction: column;
   height: 100%;
 }
 .main .playGround {
@@ -43,6 +44,16 @@ body {
 }
 .main .playGround .row .cell.ball {
   background-color: rgb(143, 15, 15) !important;
+}
+.main button {
+  cursor: pointer;
+  width: 10rem;
+  padding: 0.6rem;
+  background-color: gray;
+  border: unset;
+  border-radius: 5px;
+  color: white;
+  margin: auto;
 }
 
 .footer {

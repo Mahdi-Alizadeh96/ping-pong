@@ -1,5 +1,6 @@
 // <get elemets
 var playGround = document.querySelector(".playGround");
+var startBtn = document.querySelector("button");
 // get elemets>
 // <create board
 // <create columns
@@ -24,9 +25,10 @@ for (x = 0; x < 20; x++) {
 // create columns>
 // create board>
 // <ball motion
-setInterval(function () {
-    // ballAction();
-}, 50);
+startBtn === null || startBtn === void 0 ? void 0 : startBtn.addEventListener("click", function () {
+    setInterval(ballAction, 100);
+    startBtn.style.display = "none";
+});
 var ballYPosition = 10;
 var ballXPosition = 16;
 var motionX = false; // for left to right motion its false and for right to lef its true

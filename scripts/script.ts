@@ -1,5 +1,6 @@
 // <get elemets
 const playGround: Element | null = document.querySelector(".playGround");
+const startBtn = document.querySelector("button");
 // get elemets>
 
 // <create board
@@ -26,10 +27,12 @@ const playGround: Element | null = document.querySelector(".playGround");
 // create board>
 
 // <ball motion
-
-    setInterval(() => {
-        // ballAction();
-    },50);
+    
+    startBtn?.addEventListener("click" ,() => {
+        setInterval(ballAction ,100);
+        startBtn.style.display = "none";
+    });
+    
 
     let ballYPosition: number = 10;
     let ballXPosition: number = 16;
