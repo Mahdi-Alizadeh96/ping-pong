@@ -85,9 +85,93 @@ const startBtn = document.querySelector("button");
                 ballXPosition--;
             }
         }
-
-
         ballPositon?.classList.add("ball"); // create ball
     }
 
 // ball motion>
+
+// <left side raket
+
+    // <create left raket
+        let leftRocketYposition: number = 10;
+        
+        function handleMotionLeftRaket() {
+            const leftRaketCell1: Element | null = document.querySelector(`#y${leftRocketYposition} > #x1`);
+            const leftRaketCell2: Element | null = document.querySelector(`#y${leftRocketYposition - 1} > #x1`);
+            leftRaketCell1?.classList.add("leftRaket");
+            leftRaketCell2?.classList.add("leftRaket");
+        }
+        handleMotionLeftRaket();
+    // create left raket>
+
+    document.addEventListener("keypress" ,(e) => {
+
+        if(e.key === "w") {
+            removeRakets();
+            if(leftRocketYposition === 2) {
+                handleMotionLeftRaket();
+            } else {
+                leftRocketYposition--;
+                handleMotionLeftRaket();
+            }
+        }
+        if(e.key === "s") {
+            removeRakets();
+            if(leftRocketYposition === 20) {
+                handleMotionLeftRaket();
+            } else {
+                leftRocketYposition++;
+                handleMotionLeftRaket();
+            }
+        };
+        function removeRakets() {
+            const getAllCells = document.querySelectorAll(".cell"); // get all cells
+            getAllCells.forEach(item => item.classList.remove("leftRaket")); // remove ball class from all cells
+        }
+    })
+    
+// left side raket>
+
+// <righr side raket
+
+    // <create right raket
+        let rightRocketYposition: number = 10;
+            
+        function handleMotionRightRaket() {
+            const rightRaketCell1: Element | null = document.querySelector(`#y${rightRocketYposition} > #x31`);
+            const rightRaketCell2: Element | null = document.querySelector(`#y${rightRocketYposition - 1} > #x31`);
+            rightRaketCell1?.classList.add("rightRaket");
+            rightRaketCell2?.classList.add("rightRaket");
+        }
+        handleMotionRightRaket();
+    // create right raket>
+
+        document.addEventListener("keypress" ,(e) => {
+
+        if(e.key === "8") {
+            removeRakets()
+            if(rightRocketYposition === 2) {
+                handleMotionRightRaket();
+            } else {
+                rightRocketYposition--;
+                handleMotionRightRaket();
+            }
+        }
+        if(e.key === "2") {
+            removeRakets()
+            if(rightRocketYposition === 20) {
+                handleMotionRightRaket();
+            } else {
+                rightRocketYposition++;
+                handleMotionRightRaket();
+            }
+        }
+        function removeRakets() {
+            const getAllCells = document.querySelectorAll(".cell"); // get all cells
+            getAllCells.forEach(item => item.classList.remove("rightRaket")); // remove ball class from all cells
+        }
+    })
+
+// right side raket>
+
+

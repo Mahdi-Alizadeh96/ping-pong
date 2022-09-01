@@ -88,3 +88,80 @@ function ballAction() {
     ballPositon === null || ballPositon === void 0 ? void 0 : ballPositon.classList.add("ball"); // create ball
 }
 // ball motion>
+// <left side raket
+// <create left raket
+var leftRocketYposition = 10;
+function handleMotionLeftRaket() {
+    var leftRaketCell1 = document.querySelector("#y".concat(leftRocketYposition, " > #x1"));
+    var leftRaketCell2 = document.querySelector("#y".concat(leftRocketYposition - 1, " > #x1"));
+    leftRaketCell1 === null || leftRaketCell1 === void 0 ? void 0 : leftRaketCell1.classList.add("leftRaket");
+    leftRaketCell2 === null || leftRaketCell2 === void 0 ? void 0 : leftRaketCell2.classList.add("leftRaket");
+}
+handleMotionLeftRaket();
+// create left raket>
+document.addEventListener("keypress", function (e) {
+    if (e.key === "w") {
+        removeRakets();
+        if (leftRocketYposition === 2) {
+            handleMotionLeftRaket();
+        }
+        else {
+            leftRocketYposition--;
+            handleMotionLeftRaket();
+        }
+    }
+    if (e.key === "s") {
+        removeRakets();
+        if (leftRocketYposition === 20) {
+            handleMotionLeftRaket();
+        }
+        else {
+            leftRocketYposition++;
+            handleMotionLeftRaket();
+        }
+    }
+    ;
+    function removeRakets() {
+        var getAllCells = document.querySelectorAll(".cell"); // get all cells
+        getAllCells.forEach(function (item) { return item.classList.remove("leftRaket"); }); // remove ball class from all cells
+    }
+});
+// left side raket>
+// <righr side raket
+// <create right raket
+var rightRocketYposition = 10;
+function handleMotionRightRaket() {
+    var rightRaketCell1 = document.querySelector("#y".concat(rightRocketYposition, " > #x31"));
+    var rightRaketCell2 = document.querySelector("#y".concat(rightRocketYposition - 1, " > #x31"));
+    rightRaketCell1 === null || rightRaketCell1 === void 0 ? void 0 : rightRaketCell1.classList.add("rightRaket");
+    rightRaketCell2 === null || rightRaketCell2 === void 0 ? void 0 : rightRaketCell2.classList.add("rightRaket");
+}
+handleMotionRightRaket();
+// create right raket>
+document.addEventListener("keypress", function (e) {
+    if (e.key === "8") {
+        removeRakets();
+        if (rightRocketYposition === 2) {
+            handleMotionRightRaket();
+        }
+        else {
+            rightRocketYposition--;
+            handleMotionRightRaket();
+        }
+    }
+    if (e.key === "2") {
+        removeRakets();
+        if (rightRocketYposition === 20) {
+            handleMotionRightRaket();
+        }
+        else {
+            rightRocketYposition++;
+            handleMotionRightRaket();
+        }
+    }
+    function removeRakets() {
+        var getAllCells = document.querySelectorAll(".cell"); // get all cells
+        getAllCells.forEach(function (item) { return item.classList.remove("rightRaket"); }); // remove ball class from all cells
+    }
+});
+// right side raket>

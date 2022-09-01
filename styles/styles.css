@@ -45,6 +45,12 @@ body {
 .main .playGround .row .cell.ball {
   background-color: rgb(143, 15, 15) !important;
 }
+.main .playGround .row .cell.leftRaket {
+  background-color: burlywood;
+}
+.main .playGround .row .cell.rightRaket {
+  background-color: burlywood;
+}
 .main button {
   cursor: pointer;
   width: 10rem;
