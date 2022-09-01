@@ -41,6 +41,9 @@ body {
 .main .playGround .row .cell#x16 {
   background-color: white;
 }
+.main .playGround .row .cell.ball {
+  background-color: rgb(143, 15, 15) !important;
+}
 
 .footer {
   position: absolute;

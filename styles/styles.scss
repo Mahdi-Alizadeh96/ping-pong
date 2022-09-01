@@ -39,6 +39,9 @@ body {
                 &#x16 {
                     background-color: white;
                 }
+                &.ball {
+                    background-color: rgb(143, 15, 15) !important;
+                }
             }
         }
     }
