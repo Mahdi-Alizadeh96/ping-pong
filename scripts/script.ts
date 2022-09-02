@@ -41,15 +41,35 @@ const startBtn = document.querySelector("button");
 
     function ballAction() {
 
+        console.log(ballXPosition);
+
         const getAllCells = document.querySelectorAll(".cell"); // get all cells
         getAllCells.forEach(item => item.classList.remove("ball")); // remove ball class from all cells
         const ballPositon: Element | null = document.querySelector(`#y${ballYPosition} > #x${ballXPosition}`); // position of ball;
+
+        function rightRaketAction() { // action for right raket
+            if(document.querySelector(`#y${ballYPosition} > #x31`)?.classList.contains("rightRaket")) {
+                motionX = true;
+            } else {
+                ballYPosition = 10;
+                ballXPosition = 16;
+            };
+        };
+
+        function leftRaketAction() { // action for left raket
+            if(document.querySelector(`#y${ballYPosition} > #x1`)?.classList.contains("leftRaket")) {
+                motionX = false;
+            } else {
+                ballYPosition = 10;
+                ballXPosition = 16;
+            };
+        };
 
         if(!motionX && !motionY) {
             if (ballYPosition === 20) {
                 motionY = true;
             } else if(ballXPosition === 31) {
-                motionX = true;
+                rightRaketAction();
             } else {
                 ballYPosition++;
                 ballXPosition++;
@@ -57,7 +77,7 @@ const startBtn = document.querySelector("button");
         }
         if(!motionX && motionY) {
             if(ballXPosition === 31) {
-                motionX = true;
+                rightRaketAction();
             } else if (ballYPosition === 1) {
                 motionY = false;
             } else {
@@ -69,7 +89,7 @@ const startBtn = document.querySelector("button");
             if(ballYPosition === 1) {
                 motionY = false
             } else if (ballXPosition === 1) {
-                motionX = false;
+                leftRaketAction();
             } else {
                 ballYPosition--;
                 ballXPosition--;
@@ -77,7 +97,7 @@ const startBtn = document.querySelector("button");
         }
         if(motionX && !motionY) {
             if (ballXPosition === 1) {
-                motionX = false;
+                leftRaketAction();
             } else if (ballYPosition === 20) {
                 motionY = true;
             } else {
