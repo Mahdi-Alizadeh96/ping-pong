@@ -96,10 +96,12 @@ const startBtn = document.querySelector("button");
         let leftRocketYposition: number = 10;
         
         function handleMotionLeftRaket() {
-            const leftRaketCell1: Element | null = document.querySelector(`#y${leftRocketYposition} > #x1`);
-            const leftRaketCell2: Element | null = document.querySelector(`#y${leftRocketYposition - 1} > #x1`);
+            const leftRaketCell1: Element | null = document.querySelector(`#y${leftRocketYposition + 1} > #x1`);
+            const leftRaketCell2: Element | null = document.querySelector(`#y${leftRocketYposition} > #x1`);
+            const leftRaketCell3: Element | null = document.querySelector(`#y${leftRocketYposition - 1} > #x1`);
             leftRaketCell1?.classList.add("leftRaket");
             leftRaketCell2?.classList.add("leftRaket");
+            leftRaketCell3?.classList.add("leftRaket");
         }
         handleMotionLeftRaket();
     // create left raket>
@@ -117,7 +119,7 @@ const startBtn = document.querySelector("button");
         }
         if(e.key === "s") {
             removeRakets();
-            if(leftRocketYposition === 20) {
+            if(leftRocketYposition === 19) {
                 handleMotionLeftRaket();
             } else {
                 leftRocketYposition++;
@@ -138,10 +140,12 @@ const startBtn = document.querySelector("button");
         let rightRocketYposition: number = 10;
             
         function handleMotionRightRaket() {
-            const rightRaketCell1: Element | null = document.querySelector(`#y${rightRocketYposition} > #x31`);
-            const rightRaketCell2: Element | null = document.querySelector(`#y${rightRocketYposition - 1} > #x31`);
+            const rightRaketCell1: Element | null = document.querySelector(`#y${rightRocketYposition - 1} > #x31`);
+            const rightRaketCell2: Element | null = document.querySelector(`#y${rightRocketYposition} > #x31`);
+            const rightRaketCell3: Element | null = document.querySelector(`#y${rightRocketYposition + 1} > #x31`);
             rightRaketCell1?.classList.add("rightRaket");
             rightRaketCell2?.classList.add("rightRaket");
+            rightRaketCell3?.classList.add("rightRaket");
         }
         handleMotionRightRaket();
     // create right raket>
@@ -159,7 +163,7 @@ const startBtn = document.querySelector("button");
         }
         if(e.key === "2") {
             removeRakets()
-            if(rightRocketYposition === 20) {
+            if(rightRocketYposition === 19) {
                 handleMotionRightRaket();
             } else {
                 rightRocketYposition++;

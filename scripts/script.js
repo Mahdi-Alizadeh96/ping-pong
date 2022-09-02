@@ -92,10 +92,12 @@ function ballAction() {
 // <create left raket
 var leftRocketYposition = 10;
 function handleMotionLeftRaket() {
-    var leftRaketCell1 = document.querySelector("#y".concat(leftRocketYposition, " > #x1"));
-    var leftRaketCell2 = document.querySelector("#y".concat(leftRocketYposition - 1, " > #x1"));
+    var leftRaketCell1 = document.querySelector("#y".concat(leftRocketYposition + 1, " > #x1"));
+    var leftRaketCell2 = document.querySelector("#y".concat(leftRocketYposition, " > #x1"));
+    var leftRaketCell3 = document.querySelector("#y".concat(leftRocketYposition - 1, " > #x1"));
     leftRaketCell1 === null || leftRaketCell1 === void 0 ? void 0 : leftRaketCell1.classList.add("leftRaket");
     leftRaketCell2 === null || leftRaketCell2 === void 0 ? void 0 : leftRaketCell2.classList.add("leftRaket");
+    leftRaketCell3 === null || leftRaketCell3 === void 0 ? void 0 : leftRaketCell3.classList.add("leftRaket");
 }
 handleMotionLeftRaket();
 // create left raket>
@@ -112,7 +114,7 @@ document.addEventListener("keypress", function (e) {
     }
     if (e.key === "s") {
         removeRakets();
-        if (leftRocketYposition === 20) {
+        if (leftRocketYposition === 19) {
             handleMotionLeftRaket();
         }
         else {
@@ -131,10 +133,12 @@ document.addEventListener("keypress", function (e) {
 // <create right raket
 var rightRocketYposition = 10;
 function handleMotionRightRaket() {
-    var rightRaketCell1 = document.querySelector("#y".concat(rightRocketYposition, " > #x31"));
-    var rightRaketCell2 = document.querySelector("#y".concat(rightRocketYposition - 1, " > #x31"));
+    var rightRaketCell1 = document.querySelector("#y".concat(rightRocketYposition - 1, " > #x31"));
+    var rightRaketCell2 = document.querySelector("#y".concat(rightRocketYposition, " > #x31"));
+    var rightRaketCell3 = document.querySelector("#y".concat(rightRocketYposition + 1, " > #x31"));
     rightRaketCell1 === null || rightRaketCell1 === void 0 ? void 0 : rightRaketCell1.classList.add("rightRaket");
     rightRaketCell2 === null || rightRaketCell2 === void 0 ? void 0 : rightRaketCell2.classList.add("rightRaket");
+    rightRaketCell3 === null || rightRaketCell3 === void 0 ? void 0 : rightRaketCell3.classList.add("rightRaket");
 }
 handleMotionRightRaket();
 // create right raket>
@@ -151,7 +155,7 @@ document.addEventListener("keypress", function (e) {
     }
     if (e.key === "2") {
         removeRakets();
-        if (rightRocketYposition === 20) {
+        if (rightRocketYposition === 19) {
             handleMotionRightRaket();
         }
         else {
