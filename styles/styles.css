@@ -51,7 +51,20 @@ body {
 .main .playGround .row .cell.rightRaket {
   background-color: burlywood;
 }
-.main button {
+.main .start {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10rem;
+}
+.main .start .leftScore {
+  color: white;
+  font-size: 2rem;
+}
+.main .start .rightScore {
+  color: white;
+  font-size: 2rem;
+}
+.main .start button {
   cursor: pointer;
   width: 10rem;
   padding: 0.6rem;

@@ -52,15 +52,28 @@ body {
             }
         }
     }
-    button {
-        cursor: pointer;
-        width: 10rem;
-        padding: 0.6rem;
-        background-color: gray;
-        border: unset;
-        border-radius: 5px;
-        color: white;
-        margin: auto;
+    .start {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10rem;
+        .leftScore {
+            color: white;
+            font-size: 2rem;
+        }
+        .rightScore {
+            color: white;
+            font-size: 2rem;
+        }
+        button {
+            cursor: pointer;
+            width: 10rem;
+            padding: 0.6rem;
+            background-color: gray;
+            border: unset;
+            border-radius: 5px;
+            color: white;
+            margin: auto;
+        }
     }
 }
 
