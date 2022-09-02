@@ -26,7 +26,7 @@ for (x = 0; x < 20; x++) {
 // create board>
 // <ball motion
 startBtn === null || startBtn === void 0 ? void 0 : startBtn.addEventListener("click", function () {
-    setInterval(ballAction, 100);
+    setInterval(ballAction, 300);
     startBtn.style.display = "none";
 });
 var ballYPosition = 10;
@@ -102,31 +102,37 @@ function handleMotionLeftRaket() {
 handleMotionLeftRaket();
 // create left raket>
 document.addEventListener("keypress", function (e) {
-    if (e.key === "w") {
-        removeRakets();
-        if (leftRocketYposition === 2) {
-            handleMotionLeftRaket();
+    if (motionX) {
+        if (e.key === "w") {
+            removeRakets();
+            if (leftRocketYposition === 2) {
+                handleMotionLeftRaket();
+            }
+            else {
+                leftRocketYposition--;
+                handleMotionLeftRaket();
+            }
+            ;
         }
-        else {
-            leftRocketYposition--;
-            handleMotionLeftRaket();
+        ;
+        if (e.key === "s") {
+            removeRakets();
+            if (leftRocketYposition === 19) {
+                handleMotionLeftRaket();
+            }
+            else {
+                leftRocketYposition++;
+                handleMotionLeftRaket();
+            }
         }
-    }
-    if (e.key === "s") {
-        removeRakets();
-        if (leftRocketYposition === 19) {
-            handleMotionLeftRaket();
+        ;
+        function removeRakets() {
+            var getAllCells = document.querySelectorAll(".cell"); // get all cells
+            getAllCells.forEach(function (item) { return item.classList.remove("leftRaket"); }); // remove ball class from all cells
         }
-        else {
-            leftRocketYposition++;
-            handleMotionLeftRaket();
-        }
+        ;
     }
     ;
-    function removeRakets() {
-        var getAllCells = document.querySelectorAll(".cell"); // get all cells
-        getAllCells.forEach(function (item) { return item.classList.remove("leftRaket"); }); // remove ball class from all cells
-    }
 });
 // left side raket>
 // <righr side raket
@@ -143,29 +149,31 @@ function handleMotionRightRaket() {
 handleMotionRightRaket();
 // create right raket>
 document.addEventListener("keypress", function (e) {
-    if (e.key === "8") {
-        removeRakets();
-        if (rightRocketYposition === 2) {
-            handleMotionRightRaket();
+    if (!motionX) {
+        if (e.key === "8") {
+            removeRakets();
+            if (rightRocketYposition === 2) {
+                handleMotionRightRaket();
+            }
+            else {
+                rightRocketYposition--;
+                handleMotionRightRaket();
+            }
         }
-        else {
-            rightRocketYposition--;
-            handleMotionRightRaket();
+        if (e.key === "2") {
+            removeRakets();
+            if (rightRocketYposition === 19) {
+                handleMotionRightRaket();
+            }
+            else {
+                rightRocketYposition++;
+                handleMotionRightRaket();
+            }
         }
-    }
-    if (e.key === "2") {
-        removeRakets();
-        if (rightRocketYposition === 19) {
-            handleMotionRightRaket();
+        function removeRakets() {
+            var getAllCells = document.querySelectorAll(".cell"); // get all cells
+            getAllCells.forEach(function (item) { return item.classList.remove("rightRaket"); }); // remove ball class from all cells
         }
-        else {
-            rightRocketYposition++;
-            handleMotionRightRaket();
-        }
-    }
-    function removeRakets() {
-        var getAllCells = document.querySelectorAll(".cell"); // get all cells
-        getAllCells.forEach(function (item) { return item.classList.remove("rightRaket"); }); // remove ball class from all cells
     }
 });
 // right side raket>
