@@ -53,14 +53,19 @@ body {
 }
 .main .start {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   padding: 0 10rem;
 }
-.main .start .leftScore {
+.main .start .points {
+  display: flex;
+  justify-content: space-around;
+}
+.main .start .points .leftScore {
   color: white;
   font-size: 2rem;
 }
-.main .start .rightScore {
+.main .start .points .rightScore {
   color: white;
   font-size: 2rem;
 }

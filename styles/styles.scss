@@ -54,15 +54,20 @@ body {
     }
     .start {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
         padding: 0 10rem;
-        .leftScore {
-            color: white;
-            font-size: 2rem;
-        }
-        .rightScore {
-            color: white;
-            font-size: 2rem;
+        .points {
+            display: flex;
+            justify-content: space-around;
+            .leftScore {
+                color: white;
+                font-size: 2rem;
+            }
+            .rightScore {
+                color: white;
+                font-size: 2rem;
+            }
         }
         button {
             cursor: pointer;
