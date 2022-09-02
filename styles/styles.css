@@ -28,27 +28,80 @@ body {
   flex-direction: column;
   height: 100%;
 }
-.main .playGround {
+.main .content {
+  display: flex;
   margin: auto;
 }
-.main .playGround .row {
+.main .content .leftHelp {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  margin-right: 1rem;
+}
+.main .content .leftHelp > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .content .leftHelp .up {
+  margin-bottom: 2rem;
+}
+.main .content .leftHelp .up > span:first-child {
+  font-size: 4rem;
+}
+.main .content .leftHelp .down {
+  margin-top: 2rem;
+}
+.main .content .leftHelp .down > span:last-child {
+  font-size: 4rem;
+}
+.main .content .rightHelp {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  margin-left: 1rem;
+}
+.main .content .rightHelp > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .content .rightHelp .up {
+  margin-bottom: 2rem;
+}
+.main .content .rightHelp .up > span:first-child {
+  font-size: 4rem;
+}
+.main .content .rightHelp .down {
+  margin-top: 2rem;
+}
+.main .content .rightHelp .down > span:last-child {
+  font-size: 4rem;
+}
+.main .content .playGround .row {
   display: flex;
 }
-.main .playGround .row .cell {
+.main .content .playGround .row .cell {
   background-color: gray;
   width: 20px;
   height: 20px;
 }
-.main .playGround .row .cell#x16 {
+.main .content .playGround .row .cell#x16 {
   background-color: white;
 }
-.main .playGround .row .cell.ball {
+.main .content .playGround .row .cell.ball {
   background-color: rgb(143, 15, 15) !important;
 }
-.main .playGround .row .cell.leftRaket {
+.main .content .playGround .row .cell.leftRaket {
   background-color: burlywood;
 }
-.main .playGround .row .cell.rightRaket {
+.main .content .playGround .row .cell.rightRaket {
   background-color: burlywood;
 }
 .main .start {

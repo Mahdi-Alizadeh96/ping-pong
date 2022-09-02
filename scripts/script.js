@@ -28,7 +28,7 @@ for (x = 0; x < 20; x++) {
 // create board>
 // <ball motion
 startBtn === null || startBtn === void 0 ? void 0 : startBtn.addEventListener("click", function () {
-    setInterval(ballAction, 120);
+    setInterval(ballAction, 135);
     startBtn.style.display = "none";
 });
 var ballYPosition = 10;

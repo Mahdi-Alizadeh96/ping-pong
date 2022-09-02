@@ -31,7 +31,7 @@ const rightScore = document.querySelector(".rightScore");
 // <ball motion
     
     startBtn?.addEventListener("click" ,() => {
-        setInterval(ballAction ,120);
+        setInterval(ballAction ,135);
         startBtn.style.display = "none";
     });
     

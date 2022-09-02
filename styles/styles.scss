@@ -9,6 +9,32 @@ body {
 }
 // initial styles setting>
 
+@mixin help {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .up {
+        & > span:first-child {
+            font-size: 4rem;
+        }
+        margin-bottom: 2rem;
+    }
+    .down {
+        & > span:last-child {
+            font-size: 4rem;
+        }
+        margin-top: 2rem;
+    }
+}
+
 // <general styles
 .header {
     position: absolute;
@@ -29,25 +55,36 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    .playGround {
+    .content {
+        display: flex;
         margin: auto;
-        .row {
-            display: flex;
-            .cell {
-                background-color: gray;
-                width: 20px;
-                height: 20px;
-                &#x16 {
-                    background-color: white;
-                }
-                &.ball {
-                    background-color: rgb(143, 15, 15) !important;
-                }
-                &.leftRaket {
-                    background-color: burlywood;
-                }
-                &.rightRaket {
-                    background-color: burlywood;
+        .leftHelp {
+            @include help();
+            margin-right: 1rem;
+        }
+        .rightHelp {
+            @include help();
+            margin-left: 1rem;
+        }
+        .playGround {
+            .row {
+                display: flex;
+                .cell {
+                    background-color: gray;
+                    width: 20px;
+                    height: 20px;
+                    &#x16 {
+                        background-color: white;
+                    }
+                    &.ball {
+                        background-color: rgb(143, 15, 15) !important;
+                    }
+                    &.leftRaket {
+                        background-color: burlywood;
+                    }
+                    &.rightRaket {
+                        background-color: burlywood;
+                    }
                 }
             }
         }
